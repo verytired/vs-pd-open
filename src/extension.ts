@@ -24,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
 			return;
 		}
 		const exec = require('child_process').exec;
-		exec(`open -n -a "/Applications/Pd-0.55-2.app" "${filePath}"`, (err: any) => {
+		exec(`open -a "/Applications/Pd-0.55-2.app" "${filePath}"`, (err: any) => {
 			if (err) {
 				vscode.window.showErrorMessage('Pure Dataの起動に失敗しました: ' + err.message);
 			} else {
